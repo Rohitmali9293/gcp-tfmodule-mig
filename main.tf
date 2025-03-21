@@ -39,7 +39,7 @@ resource "google_compute_health_check" "internal_hc" {
 
 resource "google_compute_backend_service" "internal_backend" {
   name          = "internal-backend"
-  load_balancing_scheme = "INTERNAL_SELF_MANAGED "
+  load_balancing_scheme = "INTERNAL_SELF_MANAGED"
   protocol      = "TCP"
   timeout_sec   = 10
 
