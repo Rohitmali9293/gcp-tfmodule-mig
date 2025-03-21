@@ -40,7 +40,7 @@ resource "google_compute_health_check" "internal_hc" {
 resource "google_compute_region_backend_service" "internal_backend" {
   name          = "internal-backend"
   region = var.region
-  load_balancing_scheme = "INTERNAL_SELF_MANAGED"
+  load_balancing_scheme = "INTERNAL_MANAGED"
   protocol      = "TCP"
   timeout_sec   = 10
 
