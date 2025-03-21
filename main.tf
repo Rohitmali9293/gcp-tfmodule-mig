@@ -48,7 +48,7 @@ resource "google_compute_region_backend_service" "internal_backend" {
     group = google_compute_region_instance_group_manager.mig.instance_group
   }
 
-  health_checks = [google_compute__region_health_check.internal_hc.self_link]
+  health_checks = [google_compute_region_health_check.internal_hc.self_link]
 }
 
 resource "google_compute_forwarding_rule" "internal_lb" {
