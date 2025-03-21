@@ -57,7 +57,7 @@ resource "google_compute_forwarding_rule" "internal_lb" {
   region                = var.region
   network               = var.network
   subnetwork            = var.subnetwork
-  backend_service       = google_compute_backend_service.internal_backend.self_link
+  backend_service       = google_compute_region_backend_service.internal_backend.self_link
   ip_protocol           = "TCP"
   port_range            = "80"
 }
