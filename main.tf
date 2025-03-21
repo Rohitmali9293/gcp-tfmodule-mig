@@ -9,7 +9,7 @@ resource "google_compute_instance_template" "tpl" {
       boot         = true
   }
   network_interface {
-    network = var.network
+    network = var.subnetwork
   }
 
   can_ip_forward = true
