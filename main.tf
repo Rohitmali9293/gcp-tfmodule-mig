@@ -1,6 +1,6 @@
 resource "google_compute_instance_template" "tpl" {
   name = var.template_name
-  machine_type = var.template_name
+  machine_type = var.machine_type
 
   disk {
       source_image = var.image
