@@ -18,7 +18,7 @@ resource "google_compute_instance_template" "tpl" {
 
 resource "google_compute_region_instance_group_manager" "mig" {
   name   = var.mig_name
-  region = var.region 
+  region = var.region
   base_instance_name = var.mig_name
   target_size = 3
 
@@ -45,7 +45,7 @@ resource "google_compute_region_backend_service" "internal_backend" {
   timeout_sec   = 10
 
   backend {
-    group = google_compute_region_instance_group_manager.mig.instance_group
+    group = google_compute_region_instance_group_manager.mig.self_link
   }
 
   health_checks = [google_compute_region_health_check.internal_hc.self_link]
